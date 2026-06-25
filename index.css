@@ -2009,8 +2009,13 @@ img {
     transform: rotate(-45deg) translate(5px, -7px);
   }
   
-  .hero-title { font-size: 2.5rem; }
+  .hero-title { font-size: clamp(2rem, 9vw, 2.5rem); }
   .hero-subtitle { font-size: 0.95rem; }
+  
+  .partner-logos-grid {
+    justify-content: center;
+    gap: 24px;
+  }
   
   .services-cards-grid {
     grid-template-columns: 1fr;
@@ -2064,6 +2069,104 @@ img {
     flex-direction: column;
     gap: 20px;
     text-align: center;
+  }
+}
+
+/* Stacking and scaling details for smaller screens */
+@media (max-width: 600px) {
+  .dashboard-interactive-view {
+    height: auto;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+    transform: none !important;
+  }
+  
+  .dashboard-interactive-view .deco-ring {
+    display: none;
+  }
+  
+  .central-portrait-card {
+    position: relative;
+    width: 200px;
+    height: 290px;
+    margin: 0 auto 20px;
+    transform: none !important;
+  }
+  
+  .floating-card {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 340px;
+    top: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+    margin: 0 auto;
+  }
+  
+  .floating-card .float-desc {
+    display: block !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+  
+  .hero-title {
+    font-size: 2.1rem;
+  }
+  
+  .section-title {
+    font-size: clamp(1.8rem, 8vw, 2.2rem);
+  }
+  
+  .images-collage-container {
+    transform: scale(0.85);
+    transform-origin: center center;
+    margin-bottom: -60px;
+  }
+  
+  .cta-dark-card {
+    padding: 40px 16px;
+    border-radius: 24px;
+  }
+  
+  .cta-title {
+    font-size: clamp(1.6rem, 7vw, 1.9rem);
+  }
+  
+  .cta-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 24px;
+  }
+  
+  .cta-email-form {
+    gap: 12px;
+  }
+  
+  .cta-email-form input[type="email"] {
+    padding: 14px 16px 14px 44px;
+    font-size: 0.85rem;
+  }
+  
+  .input-icon {
+    left: 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  .images-collage-container {
+    transform: scale(0.72);
+    transform-origin: center center;
+    margin-bottom: -110px;
+  }
+  
+  .hero-title {
+    font-size: 1.8rem;
   }
 }
 

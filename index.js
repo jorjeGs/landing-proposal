@@ -199,13 +199,37 @@ document.addEventListener('DOMContentLoaded', () => {
       isPaused = false;
     });
 
-    // Touch events for mobile
-    creatorsContainer.addEventListener('touchstart', () => {
+    // Touch events for mobile (swipe/drag)
+    let creatorStartX = 0;
+    let creatorXOffsetStart = 0;
+    let creatorIsDragging = false;
+
+    creatorsContainer.addEventListener('touchstart', (e) => {
       isPaused = true;
-    });
+      creatorStartX = e.touches[0].clientX;
+      creatorXOffsetStart = xOffset;
+      creatorIsDragging = true;
+    }, { passive: true });
+
+    creatorsContainer.addEventListener('touchmove', (e) => {
+      if (!creatorIsDragging) return;
+      const currentX = e.touches[0].clientX;
+      const diffX = currentX - creatorStartX;
+      xOffset = creatorXOffsetStart + diffX;
+      
+      // Infinite loop boundary wrap-around checks
+      if (xOffset > 0) {
+        xOffset = -loopBoundary;
+      } else if (Math.abs(xOffset) >= loopBoundary) {
+        xOffset = 0;
+      }
+      creatorsTrack.style.transform = `translateX(${xOffset}px)`;
+    }, { passive: true });
+
     creatorsContainer.addEventListener('touchend', () => {
+      creatorIsDragging = false;
       isPaused = false;
-    });
+    }, { passive: true });
   }
 
 
@@ -276,6 +300,45 @@ document.addEventListener('DOMContentLoaded', () => {
       currentSlideIndex = 0;
       updateCarousel();
     });
+
+    // Swipe support for touch devices
+    let startX = 0;
+    let currentX = 0;
+    let isSwiping = false;
+
+    logsTrack.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+      isSwiping = true;
+    }, { passive: true });
+
+    logsTrack.addEventListener('touchmove', (e) => {
+      if (!isSwiping) return;
+      currentX = e.touches[0].clientX;
+    }, { passive: true });
+
+    logsTrack.addEventListener('touchend', () => {
+      if (!isSwiping) return;
+      isSwiping = false;
+      const diffX = startX - currentX;
+      if (Math.abs(diffX) > 50) { // threshold of 50px
+        const visibleCount = getVisibleCardsCount();
+        const maxIndex = cards.length - visibleCount;
+        
+        if (diffX > 0) {
+          // Swipe left -> Next
+          if (currentSlideIndex < maxIndex) {
+            currentSlideIndex++;
+            updateCarousel();
+          }
+        } else {
+          // Swipe right -> Prev
+          if (currentSlideIndex > 0) {
+            currentSlideIndex--;
+            updateCarousel();
+          }
+        }
+      }
+    }, { passive: true });
   }
 
 
