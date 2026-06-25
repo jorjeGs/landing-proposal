@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TSA Agency - Tu Portal a Creadores y Esports</title>
+  <!-- Google Fonts: Plus Jakarta Sans for geometric, premium look -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body class="lang-es">
+
+  <!-- Vertical lines decoration for SaaS design aesthetic -->
+  <div class="bg-grid-lines">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+
+  <!-- Radial glowing backdrops -->
+  <div class="bg-glows-wrapper">
+    <div class="radial-glow glow-hero"></div>
+    <div class="radial-glow glow-why"></div>
+    <div class="radial-glow glow-services"></div>
+    <div class="radial-glow glow-cta"></div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="header">
+    <div class="header-container">
+      <a href="#" class="logo-link">
+        <img src="assets/TSA Logo.png" alt="TSA Agency Logo" class="brand-logo">
+      </a>
+      
+      <nav class="nav-menu">
+        <a href="#hero" class="nav-link active" data-es="Inicio" data-en="Home">Inicio</a>
+        <a href="#creators" class="nav-link" data-es="Creadores" data-en="Creators">Creadores</a>
+        <a href="#why-choose" class="nav-link" data-es="Cómo Funciona" data-en="How it Works">Cómo Funciona</a>
+        <a href="#services-sec" class="nav-link" data-es="Servicios" data-en="Features">Servicios</a>
+        <a href="#events-sec" class="nav-link" data-es="Eventos" data-en="Events">Eventos</a>
+        <a href="#game-logs-sec" class="nav-link" data-es="Bitácora" data-en="Game Logs">Bitácora</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Language Switcher Selector -->
+        <div class="lang-selector">
+          <button class="lang-btn active" id="btn-es">ESP</button>
+          <span class="lang-divider">|</span>
+          <button class="lang-btn" id="btn-en">ENG</button>
+        </div>
+        <a href="#contact" class="btn btn-primary btn-nav" data-es="Contacto" data-en="Contact Us">Contacto</a>
+        
+        <!-- Mobile Menu Trigger -->
+        <button class="hamburger-menu" id="hamburger-trigger" aria-label="Toggle Menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Dropdown Nav Menu -->
+  <div class="mobile-nav" id="mobile-nav-menu">
+    <nav class="mobile-nav-links">
+      <a href="#hero" class="mobile-nav-link" data-es="Inicio" data-en="Home">Inicio</a>
+      <a href="#creators" class="mobile-nav-link" data-es="Creadores" data-en="Creators">Creadores</a>
+      <a href="#why-choose" class="mobile-nav-link" data-es="Cómo Funciona" data-en="How it Works">Cómo Funciona</a>
+      <a href="#services-sec" class="mobile-nav-link" data-es="Servicios" data-en="Features">Servicios</a>
+      <a href="#events-sec" class="mobile-nav-link" data-es="Eventos" data-en="Events">Eventos</a>
+      <a href="#game-logs-sec" class="mobile-nav-link" data-es="Bitácora" data-en="Game Logs">Bitácora</a>
+    </nav>
+    <div class="mobile-nav-actions">
+      <div class="lang-selector-mobile">
+        <button class="lang-btn-mobile active" id="m-btn-es">ESP</button>
+        <span class="lang-divider">|</span>
+        <button class="lang-btn-mobile" id="m-btn-en">ENG</button>
+      </div>
+      <a href="#contact" class="btn btn-primary" data-es="Contáctanos" data-en="Contact Us">Contáctanos</a>
+    </div>
+  </div>
+
+  <main class="main-content">
+    
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-container text-center">
+        <div class="hero-badge-wrapper animate-fade-in">
+          <div class="hero-badge">
+            <img src="assets/TSA Logo.png" alt="TSA icon" class="hero-badge-icon">
+            <span data-es="Tu Agencia #1 de Influencers" data-en="Your #1 Influencer Agency">Tu Agencia #1 de Influencers</span>
+          </div>
+        </div>
+
+        <h1 class="hero-title animate-fade-in-up">
+          <span data-es="Comienza Con" data-en="Get Started With">Comienza Con</span> 
+          <span class="accent-text">TSA Agency</span> 
+          <span data-es="Hoy Mismo Gratis!" data-en="Today Free Of Cost!">Hoy Mismo Gratis!</span>
+        </h1>
+
+        <p class="hero-subtitle animate-fade-in-up-delay">
+          <span data-es="Crea tu perfil, muestra tus habilidades y deja que los patrocinadores te encuentren en tiempo real." 
+                data-en="Create your profile, showcase your skills, and let sponsors find you in real time.">
+            Crea tu perfil, muestra tus habilidades y deja que los patrocinadores te encuentren en tiempo real.
+          </span>
+        </p>
+
+        <div class="trust-badge animate-fade-in-up-delay">
+          <div class="avatar-stack">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Founder 1">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80" alt="Founder 2">
+            <img src="https://images.unsplash.com/photo-1548142813-c348350df52b?w=100&auto=format&fit=crop&q=80" alt="Founder 3">
+          </div>
+          <span class="trust-text">
+            🔥 <span data-es="Confiado por el top 1% de agencias y fundadores" data-en="Trusted by top 1% agencies and founders">Confiado por el top 1% de agencias y fundadores</span>
+          </span>
+        </div>
+
+        <div class="hero-ctas animate-fade-in-up-delay">
+          <a href="#contact" class="btn btn-primary" data-es="Comenzar" data-en="Get Started">Comenzar</a>
+          <a href="#why-choose" class="btn btn-outline" data-es="Saber más" data-en="Learn more">Saber más</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partner / Brand Logo Strip -->
+    <section class="partner-logos-section">
+      <div class="container">
+        <div class="partner-logos-grid">
+          <!-- AMD -->
+          <div class="logo-item" title="AMD">
+            <svg viewBox="0 0 120 40" fill="currentColor"><path d="M12 4h16l12 12V4h12v32H40V24L28 36H12V4zm24 20v-8h-8l8 8zM58 4h8l14 32h-8l-3-7H61l-3 7h-8L58 4zm1 19h7l-3.5-9L59 23zm43-19c8 0 14 6 14 14s-6 14-14 14h-8V4h8zm-2 22c5 0 8-3 8-8s-3-8-8-8h-2v16h2z"/></svg>
+          </div>
+          <!-- Riot Games -->
+          <div class="logo-item" title="Riot Games">
+            <svg viewBox="0 0 120 40" fill="currentColor"><path d="M10 20c0-5.5 4.5-10 10-10s10 4.5 10 10-4.5 10-10 10-10-4.5-10-10zm18-5l-4-2.5v5l4 2.5v-5zm-6-3.8l-4 2.5 4 2.5 4-2.5-4-2.5zm-6 3.8l4-2.5v5l-4 2.5v-5zm-2 4l4 2.5h8l4-2.5-8-5-8 5zM45 10h12v4H49v6h6v4h-6v6h8v4H45V10zm25 0h12v4H73v16h-4V10zm18 0h10c5 0 9 3 9 7v6c0 4-4 7-9 7h-6v6h-4V10zm4 12h6c3 0 5-1.5 5-4s-2-4-5-4h-6v8z"/></svg>
+          </div>
+          <!-- Mojang -->
+          <div class="logo-item" title="Mojang">
+            <svg viewBox="0 0 120 40" fill="currentColor"><path d="M10 8h16v8H10V8zm22 0h16v24H32V8zm22 0h16v8H54V8zm22 0h16v24H76V8zm22 0h14v8H98V8zM10 20h16v12H10V20zm44 0h16v12H54V20zm44 0h14v12H98V20z"/></svg>
+          </div>
+          <!-- TikTok -->
+          <div class="logo-item" title="TikTok">
+            <svg viewBox="0 0 120 40" fill="currentColor"><path d="M90 10c-3.3 0-6.2 1.6-8.1 4.1V4h-8v32c0 2.2-1.8 4-4 4s-4-1.8-4-4 1.8-4 4-4c.8 0 1.5.2 2.1.6v-8.2c-1-.3-2-.4-3.1-.4-6.6 0-12 5.4-12 12s5.4 12 12 12 12-5.4 12-12v-16c2.4 2.4 5.7 4 9.4 4v-8c-2.4 0-4.6-.9-6.3-2.5V10z"/></svg>
+          </div>
+          <!-- Twitch -->
+          <div class="logo-item" title="Twitch">
+            <svg viewBox="0 0 120 40" fill="currentColor"><path d="M15 4L7 12v22h8v6l6-6h8l14-14V4H15zm29 18l-8 8h-8l-6 6v-6H15V8h29v14zm-6-9h-4v9h4v-9zm-10 0h-4v9h4v-9z"/></svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Creators / Hero Portrait Gallery (Auto-Carousel) -->
+    <section id="creators" class="creators-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title">
+            <span data-es="Nuestros Creadores" data-en="Our Elite Creators">Nuestros Creadores</span> 
+            <span class="accent-text" data-es="Destacados" data-en="Featured">Destacados</span>
+          </h2>
+          <p class="section-subtitle">
+            <span data-es="La fuerza impulsora detrás de las mayores comunidades de gaming y streaming." 
+                  data-en="The driving force behind the largest gaming and streaming communities.">
+              La fuerza impulsora detrás de las mayores comunidades de gaming y streaming.
+            </span>
+          </p>
+        </div>
+
+        <!-- Carousel Wrapper with Auto-Scroll -->
+        <div class="creators-carousel-wrapper" id="creators-carousel-container">
+          <div class="creators-track" id="creators-carousel-track">
+            
+            <!-- Creator Card 1 -->
+            <div class="creator-card">
+              <div class="creator-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=500&auto=format&fit=crop&q=80" alt="Gamer 1" class="creator-img">
+                <div class="creator-glow"></div>
+                <div class="creator-badge" data-es="PRO GAMER" data-en="PRO GAMER">PRO GAMER</div>
+              </div>
+              <div class="creator-info">
+                <h3 class="creator-name">Alex "Viper" Ortiz</h3>
+                <p class="creator-game">Valorant / Twitch</p>
+                <div class="creator-stats">
+                  <span class="stat-label" data-es="Seguidores:" data-en="Followers:">Seguidores:</span>
+                  <span class="stat-value">1.8M</span>
+                </div>
+                <a href="#contact" class="btn btn-primary btn-sm btn-creator-more" data-es="Ver más" data-en="See more">Ver más</a>
+              </div>
+            </div>
+
+            <!-- Creator Card 2 -->
+            <div class="creator-card">
+              <div class="creator-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1548142813-c348350df52b?w=500&auto=format&fit=crop&q=80" alt="Gamer 2" class="creator-img">
+                <div class="creator-glow"></div>
+                <div class="creator-badge" data-es="STREAMER" data-en="STREAMER">STREAMER</div>
+              </div>
+              <div class="creator-info">
+                <h3 class="creator-name">Elena "Kira" Sanz</h3>
+                <p class="creator-game">Just Chatting / TikTok</p>
+                <div class="creator-stats">
+                  <span class="stat-label" data-es="Seguidores:" data-en="Followers:">Seguidores:</span>
+                  <span class="stat-value">2.4M</span>
+                </div>
+                <a href="#contact" class="btn btn-primary btn-sm btn-creator-more" data-es="Ver más" data-en="See more">Ver más</a>
+              </div>
+            </div>
+
+            <!-- Creator Card 3 -->
+            <div class="creator-card">
+              <div class="creator-image-wrapper">
+                <img src="assets/Tesita.png" alt="Mascota Tesita" class="creator-img img-contain bg-dark-gradient">
+                <div class="creator-glow"></div>
+                <div class="creator-badge" data-es="MASCOTA OFICIAL" data-en="OFFICIAL MASCOT">MASCOTA OFICIAL</div>
+              </div>
+              <div class="creator-info">
+                <h3 class="creator-name">Tesita Cat</h3>
+                <p class="creator-game">TSA Gaming Mascot</p>
+                <div class="creator-stats">
+                  <span class="stat-label" data-es="Seguidores:" data-en="Followers:">Seguidores:</span>
+                  <span class="stat-value">5.0M</span>
+                </div>
+                <a href="#contact" class="btn btn-primary btn-sm btn-creator-more" data-es="Ver más" data-en="See more">Ver más</a>
+              </div>
+            </div>
+
+            <!-- Creator Card 4 -->
+            <div class="creator-card">
+              <div class="creator-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&auto=format&fit=crop&q=80" alt="Gamer 3" class="creator-img">
+                <div class="creator-glow"></div>
+                <div class="creator-badge" data-es="ESPORTS PRO" data-en="ESPORTS PRO">ESPORTS PRO</div>
+              </div>
+              <div class="creator-info">
+                <h3 class="creator-name">Marcus "Apex" Ruiz</h3>
+                <p class="creator-game">Apex Legends / Twitch</p>
+                <div class="creator-stats">
+                  <span class="stat-label" data-es="Seguidores:" data-en="Followers:">Seguidores:</span>
+                  <span class="stat-value">950K</span>
+                </div>
+                <a href="#contact" class="btn btn-primary btn-sm btn-creator-more" data-es="Ver más" data-en="See more">Ver más</a>
+              </div>
+            </div>
+
+            <!-- Creator Card 5 -->
+            <div class="creator-card">
+              <div class="creator-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=80" alt="Gamer 4" class="creator-img">
+                <div class="creator-glow"></div>
+                <div class="creator-badge" data-es="VARIEDAD" data-en="VARIETY">VARIEDAD</div>
+              </div>
+              <div class="creator-info">
+                <h3 class="creator-name">Lucía "Luna" Gómez</h3>
+                <p class="creator-game">Minecraft / YouTube</p>
+                <div class="creator-stats">
+                  <span class="stat-label" data-es="Seguidores:" data-en="Followers:">Seguidores:</span>
+                  <span class="stat-value">3.1M</span>
+                </div>
+                <a href="#contact" class="btn btn-primary btn-sm btn-creator-more" data-es="Ver más" data-en="See more">Ver más</a>
+              </div>
+            </div>
+
+            <!-- Creator Card 6 -->
+            <div class="creator-card">
+              <div class="creator-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=500&auto=format&fit=crop&q=80" alt="Gamer 5" class="creator-img">
+                <div class="creator-glow"></div>
+                <div class="creator-badge" data-es="COSPLAY / STREAMER" data-en="COSPLAY / STREAMER">COSPLAY / STREAMER</div>
+              </div>
+              <div class="creator-info">
+                <h3 class="creator-name">Marta "Sakura" Chen</h3>
+                <p class="creator-game">Just Chatting / Instagram</p>
+                <div class="creator-stats">
+                  <span class="stat-label" data-es="Seguidores:" data-en="Followers:">Seguidores:</span>
+                  <span class="stat-value">1.2M</span>
+                </div>
+                <a href="#contact" class="btn btn-primary btn-sm btn-creator-more" data-es="Ver más" data-en="See more">Ver más</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Section + Eventos Section -->
+    <section id="why-choose" class="why-choose-section">
+      <div class="container">
+        
+        <!-- Part A: Why Choose layout with floating cards around central Mascot -->
+        <div class="why-main-layout">
+          <div class="section-header text-center">
+            <h2 class="section-title">
+              <span data-es="¿Por Qué Elegir" data-en="Why Choose">¿Por Qué Elegir</span> 
+              <span class="accent-text">TSA Agency?</span>
+            </h2>
+            <p class="section-subtitle">
+              <span data-es="Desbloquea tu potencial y conéctate con marcas y torneos líderes globales." 
+                    data-en="Unlock your potential and connect with global leading brands and tournaments.">
+                Desbloquea tu potencial y conéctate con marcas y torneos líderes globales.
+              </span>
+            </p>
+          </div>
+
+          <div class="dashboard-interactive-view">
+            <!-- Background Rotating Rings -->
+            <div class="deco-ring ring-outer"></div>
+            <div class="deco-ring ring-middle"></div>
+            <div class="deco-ring ring-inner"></div>
+
+            <!-- Central Portrait (Mascot: Tesita 2.0 with custom overlay) -->
+            <div class="central-portrait-card">
+              <img src="assets/Tesita2.0.png" alt="Mascota Tesita 2.0" class="mascot-central-img">
+              <div class="ambient-glow"></div>
+            </div>
+
+            <!-- Floating Feature Cards surrounding central mascot -->
+            <!-- Card 1: Showcase Work (Left Top) -->
+            <div class="floating-card pos-showcase">
+              <div class="float-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </div>
+              <h4 class="float-title" data-es="Muestra tu Trabajo" data-en="Showcase Work">Muestra tu Trabajo</h4>
+              <p class="float-desc" data-es="Destaca tus mejores directos y clips en tu portfolio." data-en="Highlight your best streams and clips in your portfolio.">Destaca tus mejores directos y clips en tu portfolio.</p>
+              <a href="#contact" class="btn btn-primary btn-xs" data-es="Agregar Portfolio" data-en="Add Work">Agregar Portfolio</a>
+            </div>
+
+            <!-- Card 2: 100K+ Users (Left Bottom) -->
+            <div class="floating-card pos-users">
+              <div class="float-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 7a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <h4 class="float-title">100K+ <span data-es="Activos" data-en="Active">Activos</span></h4>
+              <p class="float-desc" data-es="Creadores y marcas activas en todo el mundo." data-en="Active creators and brands worldwide.">Creadores y marcas activas en todo el mundo.</p>
+            </div>
+
+            <!-- Card 3: Networking (Right Top) -->
+            <div class="floating-card pos-networking">
+              <div class="float-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              </div>
+              <h4 class="float-title" data-es="Networking" data-en="Networking">Networking</h4>
+              <p class="float-desc" data-es="Acceso a eventos exclusivos, salas de chat y colaboraciones." data-en="Access to exclusive events, chat rooms, and collabs.">Acceso a eventos exclusivos, salas de chat y colaboraciones.</p>
+            </div>
+
+            <!-- Card 4: Resume Builder (Right Bottom) -->
+            <div class="floating-card pos-resume">
+              <div class="float-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+              </div>
+              <h4 class="float-title" data-es="Creador de CV" data-en="Resume Builder">Creador de CV</h4>
+              <p class="float-desc" data-es="Genera un currículum gamer profesional en un clic." data-en="Generate a professional gamer resume in one click.">Genera un currículum gamer profesional en un clic.</p>
+              <a href="#contact" class="btn btn-primary btn-xs" data-es="Crear CV" data-en="Build Resume">Crear CV</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Part B: Eventos Section (Complementing Why Choose) -->
+        <div id="events-sec" class="events-sub-section">
+          <div class="events-grid-split">
+            <div class="events-content-left">
+              <span class="events-tag" data-es="PRESENCIA GLOBAL" data-en="GLOBAL PRESENCE">PRESENCIA GLOBAL</span>
+              <h3 class="events-title">
+                <span data-es="Presencia en Eventos y" data-en="Active in Events &">Presencia en Eventos y</span> 
+                <span class="accent-text" data-es="Torneos de Esports" data-en="Esports Tournaments">Torneos de Esports</span>
+              </h3>
+              <p class="events-desc">
+                <span data-es="Nuestros creadores y streamers lideran la presencia física y online en los festivales, copas y eventos competitivos más importantes del sector gamer. Desde torneos locales hasta campeonatos mundiales, marcamos el ritmo del sector." 
+                      data-en="Our creators and streamers lead physical and online presence at the biggest gaming festivals, cups, and competitive events in the industry. From local tourneys to world championships, we set the pace.">
+                  Nuestros creadores y streamers lideran la presencia física y online en los festivales, copas y eventos competitivos más importantes del sector gamer. Desde torneos locales hasta campeonatos mundiales, marcamos el ritmo del sector.
+                </span>
+              </p>
+              <a href="#contact" class="btn btn-primary btn-events-cta" data-es="Organizar Evento o Torneo" data-en="Host Event or Tournament">Organizar Evento o Torneo</a>
+            </div>
+
+            <!-- Event Logos Automatic Scrolling strip (pause on hover) -->
+            <div class="events-carousel-right">
+              <h4 class="carousel-strip-title" data-es="Torneos y Eventos donde participamos:" data-en="Tournaments & Events we participated in:">Torneos y Eventos donde participamos:</h4>
+              <div class="events-scroll-container" id="events-carousel-container">
+                <div class="events-scroll-track" id="events-carousel-track">
+                  
+                  <!-- Event Logo 1 -->
+                  <div class="event-logo-card">
+                    <span class="event-name">TwitchCon</span>
+                    <span class="event-year">2026</span>
+                    <a href="#contact" class="btn btn-outline btn-xs" data-es="Ver más" data-en="See more">Ver más</a>
+                  </div>
+                  <!-- Event Logo 2 -->
+                  <div class="event-logo-card">
+                    <span class="event-name">ESL Pro League</span>
+                    <span class="event-year">2026</span>
+                    <a href="#contact" class="btn btn-outline btn-xs" data-es="Ver más" data-en="See more">Ver más</a>
+                  </div>
+                  <!-- Event Logo 3 -->
+                  <div class="event-logo-card">
+                    <span class="event-name">DreamHack</span>
+                    <span class="event-year">2025</span>
+                    <a href="#contact" class="btn btn-outline btn-xs" data-es="Ver más" data-en="See more">Ver más</a>
+                  </div>
+                  <!-- Event Logo 4 -->
+                  <div class="event-logo-card">
+                    <span class="event-name">VCT Masters</span>
+                    <span class="event-year">2026</span>
+                    <a href="#contact" class="btn btn-outline btn-xs" data-es="Ver más" data-en="See more">Ver más</a>
+                  </div>
+                  <!-- Event Logo 5 -->
+                  <div class="event-logo-card">
+                    <span class="event-name">Gamepolis</span>
+                    <span class="event-year">2025</span>
+                    <a href="#contact" class="btn btn-outline btn-xs" data-es="Ver más" data-en="See more">Ver más</a>
+                  </div>
+                  
+                  <!-- Clone for seamless loop -->
+                  <div class="event-logo-card">
+                    <span class="event-name">TwitchCon</span>
+                    <span class="event-year">2026</span>
+                    <a href="#contact" class="btn btn-outline btn-xs" data-es="Ver más" data-en="See more">Ver más</a>
+                  </div>
+                  <div class="event-logo-card">
+                    <span class="event-name">ESL Pro League</span>
+                    <span class="event-year">2026</span>
+                    <a href="#contact" class="btn btn-outline btn-xs" data-es="Ver más" data-en="See more">Ver más</a>
+                  </div>
+                  <div class="event-logo-card">
+                    <span class="event-name">DreamHack</span>
+                    <span class="event-year">2025</span>
+                    <a href="#contact" class="btn btn-outline btn-xs" data-es="Ver más" data-en="See more">Ver más</a>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Client Logo Section + Top Creadores del mes Section -->
+    <section class="clients-creators-section">
+      <div class="container">
+        
+        <!-- Part A: We Are Happy to Work with Incredible Clients -->
+        <div class="clients-sub-section text-center">
+          <h3 class="clients-title">
+            <span data-es="¡Estamos Felices de Colaborar con" data-en="We Are Happy To Work With">¡Estamos Felices de Colaborar con</span> 
+            <span class="accent-text" data-es="Clientes Increíbles!" data-en="Incredible Clients!">Clientes Increíbles!</span>
+          </h3>
+          <p class="clients-subtitle" data-es="Empresas de primer nivel que confían en nuestros talentos." data-en="Top tier companies that place their trust in our talents.">Empresas de primer nivel que confían en nuestros talentos.</p>
+          
+          <div class="client-icons-strip">
+            <!-- Discord Icon -->
+            <div class="client-circle" title="Discord">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M19.27 4.73A16.13 16.13 0 0 0 14.81 3.3a9.92 9.92 0 0 0-.44.9 14.85 14.85 0 0 0-4.74 0 9.87 9.87 0 0 0-.46-.9 16.14 16.14 0 0 0-4.46 1.43c-2.85 4.2-3.8 8.3-2.99 12.3a16.24 16.24 0 0 0 4.9 2.5 11.23 11.23 0 0 0 1.04-1.7 10.53 10.53 0 0 1-1.63-.78c.14-.1.28-.2.4-.3a11.66 11.66 0 0 0 9.68 0c.12.1.26.2.4.3a10.45 10.45 0 0 1-1.63.78 11.4 11.4 0 0 0 1.04 1.7 16.27 16.27 0 0 0 4.93-2.5c.9-4.72-.05-8.8-2.93-12.3zM9.54 14.2a1.86 1.86 0 1 1 0-3.72 1.86 1.86 0 0 1 0 3.72zm4.92 0a1.86 1.86 0 1 1 0-3.72 1.86 1.86 0 0 1 0 3.72z"/></svg>
+            </div>
+            <!-- Spotify Icon -->
+            <div class="client-circle" title="Spotify">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.59 14.4c-.18.29-.56.38-.85.2-2.38-1.46-5.38-1.79-8.91-.98-.33.08-.66-.13-.74-.46s.13-.66.46-.74c3.86-.88 7.17-.51 9.84 1.13.29.17.38.56.2.85zm1.22-2.72c-.23.37-.71.49-1.08.26-2.73-1.68-6.88-2.16-10.1-1.19-.41.12-.85-.11-.97-.53s.11-.85.53-.97c3.67-1.11 8.24-.58 11.36 1.34.37.23.49.71.26 1.09zm.1-2.85c-3.27-1.94-8.66-2.12-11.78-1.17-.5.15-1.03-.13-1.18-.63-.15-.5.13-1.03.63-1.18 3.59-1.09 9.54-.88 13.31 1.36.45.27.6.85.33 1.3-.27.45-.85.6-1.31.32z"/></svg>
+            </div>
+            <!-- Razer Icon -->
+            <div class="client-circle" title="Razer">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 2S8.5 5 8.5 9c0 2 1.5 3 1.5 3s-3-1-3-4c0-3.5 4-6 4-6s4 2.5 4 6c0 3-3 4-3 4s1.5-1 1.5-3c0-4-3.5-7-3.5-7zm0 2.5s2.5 2 2.5 4.5c0 1.5-1 2-1 2s-1.5-.5-1.5-2c0-1.5 1-2 1-2s-1 .5-1 1.5c0 1-.5 1.5-.5 1.5s-.5-.5-.5-1.5c0-1 1-1.5 1-2s-1.5-.5-1.5-2c0-2.5 2.5-4.5 2.5-4.5z"/></svg>
+            </div>
+            <!-- Logitech Icon -->
+            <div class="client-circle" title="Logitech">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z"/></svg>
+            </div>
+            <!-- PlayStation Icon -->
+            <div class="client-circle" title="PlayStation">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm3.3 12.1a1.9 1.9 0 0 1-.8.2h-3v1h3v.8h-3v1h3a2 2 0 0 0 2-2v-1a2 2 0 0 0-1.2-2zm-6.6 0h-2v1h2v.8h-2v1h2a2 2 0 0 0 2-2v-1a2 2 0 0 0-2-1.8z"/></svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Part B: Top Creadores del mes Section -->
+        <div class="top-creators-section">
+          <div class="section-header text-center">
+            <h3 class="section-title">
+              <span data-es="Top Creadores del" data-en="Top Creators of the">Top Creadores del</span> 
+              <span class="accent-text" data-es="Mes por Agencia" data-en="Month by Division">Mes por Agencia</span>
+            </h3>
+            <p class="section-subtitle" data-es="Los streamers con mayor crecimiento y engagement de esta temporada." data-en="The streamers with the highest growth and engagement this season.">Los streamers con mayor crecimiento y engagement de esta temporada.</p>
+          </div>
+
+          <div class="agency-divisions-grid">
+            <!-- Division 1: Esports / Pro Gaming -->
+            <div class="division-card">
+              <div class="division-header">
+                <span class="div-badge" data-es="DIVISIÓN COMPETITIVA" data-en="COMPETITIVE DIVISION">DIVISIÓN COMPETITIVA</span>
+                <h4 class="div-title">TSA Esports Team</h4>
+              </div>
+              <div class="div-top-creator">
+                <div class="creator-avatar-row">
+                  <img src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=100&auto=format&fit=crop&q=80" alt="Creator">
+                  <div>
+                    <h5 class="div-creator-name">Alex "Viper" Ortiz</h5>
+                    <p class="div-creator-handle">@viper_val</p>
+                  </div>
+                </div>
+                <div class="creator-metric-box">
+                  <div class="metric-item">
+                    <span class="metric-val">+25%</span>
+                    <span class="metric-lbl" data-es="Audiencia" data-en="Views Growth">Audiencia</span>
+                  </div>
+                  <div class="metric-item">
+                    <span class="metric-val">120 hrs</span>
+                    <span class="metric-lbl" data-es="Transmisión" data-en="Air Time">Transmisión</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Division 2: Streamers & Entertainment -->
+            <div class="division-card featured-division">
+              <div class="division-header">
+                <span class="div-badge active" data-es="ENTRETENIMIENTO" data-en="ENTERTAINMENT">ENTRETENIMIENTO</span>
+                <h4 class="div-title">TSA Creators Live</h4>
+              </div>
+              <div class="div-top-creator">
+                <div class="creator-avatar-row">
+                  <img src="https://images.unsplash.com/photo-1548142813-c348350df52b?w=100&auto=format&fit=crop&q=80" alt="Creator">
+                  <div>
+                    <h5 class="div-creator-name">Elena "Kira" Sanz</h5>
+                    <p class="div-creator-handle">@kira_live</p>
+                  </div>
+                </div>
+                <div class="creator-metric-box">
+                  <div class="metric-item">
+                    <span class="metric-val">+42%</span>
+                    <span class="metric-lbl" data-es="Seguidores" data-en="Followers">Seguidores</span>
+                  </div>
+                  <div class="metric-item">
+                    <span class="metric-val">1.2M</span>
+                    <span class="metric-lbl" data-es="Likes Semanal" data-en="Weekly Likes">Likes Semanal</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Division 3: Variety / Lifestyle -->
+            <div class="division-card">
+              <div class="division-header">
+                <span class="div-badge" data-es="VARIEDAD" data-en="VARIETY">VARIEDAD</span>
+                <h4 class="div-title">TSA Community & Joy</h4>
+              </div>
+              <div class="div-top-creator">
+                <div class="creator-avatar-row">
+                  <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Creator">
+                  <div>
+                    <h5 class="div-creator-name">Lucía "Luna" Gómez</h5>
+                    <p class="div-creator-handle">@luna_mcraft</p>
+                  </div>
+                </div>
+                <div class="creator-metric-box">
+                  <div class="metric-item">
+                    <span class="metric-val">+18%</span>
+                    <span class="metric-lbl" data-es="Subscriptores" data-en="Subscribers">Subscriptores</span>
+                  </div>
+                  <div class="metric-item">
+                    <span class="metric-val">80K</span>
+                    <span class="metric-lbl" data-es="Interacciones" data-en="Engagements">Interacciones</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works-section">
+      <div class="container grid-two-columns">
+        
+        <!-- Left: Steps -->
+        <div class="how-works-steps-left">
+          <span class="step-sup-tag" data-es="PROCESO RÁPIDO" data-en="FAST PROCESS">PROCESO RÁPIDO</span>
+          <h2 class="section-title">
+            <span data-es="¿Cómo" data-en="How It">¿Cómo</span> 
+            <span class="accent-text" data-es="Funciona?" data-en="Works!">Funciona?</span>
+          </h2>
+          <p class="section-subtitle-left" data-es="Consigue patrocinios y gestiona tu carrera en tres simples pasos." data-en="Get sponsorships and manage your career in three simple steps.">Consigue patrocinios y gestiona tu carrera en tres simples pasos.</p>
+
+          <div class="how-steps-stack">
+            <!-- Step 1 -->
+            <div class="how-step-item">
+              <div class="step-num-badge">1</div>
+              <div class="step-item-content">
+                <h4 class="step-item-title" data-es="Regístrate y Crea tu Cuenta" data-en="Sign Up and Create Account">Regístrate y Crea tu Cuenta</h4>
+                <p class="step-item-desc" data-es="Completa tus detalles de streamer, redes y conecta tus cuentas activas." data-en="Fill out your streamer details, socials, and connect your active channels.">Completa tus detalles de streamer, redes y conecta tus cuentas activas.</p>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="how-step-item">
+              <div class="step-num-badge">2</div>
+              <div class="step-item-content">
+                <h4 class="step-item-title" data-es="Sube tu Portfolio y Estadísticas" data-en="Upload Your Portfolio">Sube tu Portfolio y Estadísticas</h4>
+                <p class="step-item-desc" data-es="Agrega tus mejores directos, clips destacados y estadísticas de audiencia." data-en="Add your best streams, highlight clips, and audience demographics.">Agrega tus mejores directos, clips destacados y estadísticas de audiencia.</p>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="how-step-item">
+              <div class="step-num-badge">3</div>
+              <div class="step-item-content">
+                <h4 class="step-item-title" data-es="Sé Descubierto por Grandes Marcas" data-en="Get Discovered">Sé Descubierto por Grandes Marcas</h4>
+                <p class="step-item-desc" data-es="Recibe ofertas de patrocinio y campañas de marketing directamente en tu panel." data-en="Let sponsors and marketing managers pitch campaigns directly to your dashboard.">Recibe ofertas de patrocinio y campañas de marketing directamente en tu panel.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Image Collage & Stat badge -->
+        <div class="how-works-images-right">
+          <div class="images-collage-container">
+            <div class="collage-back-glow"></div>
+            <!-- Large Image (Office working) -->
+            <div class="collage-img-card main-img-card">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&auto=format&fit=crop&q=80" alt="Sponsor Manager" class="collage-img">
+            </div>
+            <!-- Small Overlapping Image (Streamer writing code/chatting) -->
+            <div class="collage-img-card secondary-img-card">
+              <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&auto=format&fit=crop&q=80" alt="Streamer Desk" class="collage-img">
+            </div>
+
+            <!-- Floating Stat badge -->
+            <div class="floating-stat-badge">
+              <div class="stat-avatars">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=50&auto=format&fit=crop&q=80" alt="User 1">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&auto=format&fit=crop&q=80" alt="User 2">
+                <img src="https://images.unsplash.com/photo-1548142813-c348350df52b?w=50&auto=format&fit=crop&q=80" alt="User 3">
+              </div>
+              <div class="stat-badge-text">
+                <div class="badge-num">10K+</div>
+                <div class="badge-label" data-es="Creadores Activos" data-en="Active Creators">Creadores Activos</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Services / Feature Cards + Game Logs Section -->
+    <section id="services-sec" class="services-section">
+      <div class="container">
+        
+        <!-- Part A: Four-Column Services Grid -->
+        <div class="services-main-grid">
+          <div class="section-header text-center">
+            <h2 class="section-title">
+              <span data-es="Nuestros Servcios" data-en="Our Premium Services">Nuestros Servicios</span> 
+              <span class="accent-text" data-es="Exclusivos" data-en="Features">Exclusivos</span>
+            </h2>
+            <p class="section-subtitle" data-es="Impulsamos tu marca e influencia hacia el siguiente nivel." data-en="We push your brand and influence to the absolute next level.">Impulsamos tu marca e influencia hacia el siguiente nivel.</p>
+          </div>
+
+          <div class="services-cards-grid">
+            <!-- Card 1: Influencer Marketing -->
+            <div class="service-card">
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 7a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <h3 class="service-card-title" data-es="Marketing de Influencers" data-en="Influencer Marketing">Marketing de Influencers</h3>
+              <p class="service-card-desc" data-es="Campañas personalizadas con los streamers y creadores de contenido más relevantes de tu nicho." data-en="Tailored campaigns with the most relevant streamers and content creators in your niche.">Campañas personalizadas con los streamers y creadores de contenido más relevantes de tu nicho.</p>
+              <a href="#contact" class="service-link" data-es="Comenzar →" data-en="Get Started →">Comenzar →</a>
+            </div>
+
+            <!-- Card 2: Social Media Management (Featured card with cyan border) -->
+            <div class="service-card featured-service">
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+              </div>
+              <h3 class="service-card-title" data-es="Gestión de Redes" data-en="Social Media Management">Gestión de Redes</h3>
+              <p class="service-card-desc" data-es="Estrategia, edición de clips para TikTok/Reels, moderación y crecimiento orgánico de tus canales." data-en="Strategy, clip editing for TikTok/Reels, moderation, and organic growth for your channels.">Estrategia, edición de clips para TikTok/Reels, moderación y crecimiento orgánico de tus canales.</p>
+              <a href="#contact" class="service-link" data-es="Comenzar →" data-en="Get Started →">Comenzar →</a>
+            </div>
+
+            <!-- Card 3: Sponsorship Management -->
+            <div class="service-card">
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              </div>
+              <h3 class="service-card-title" data-es="Gestión de Patrocinios" data-en="Sponsorship Management">Gestión de Patrocinios</h3>
+              <p class="service-card-desc" data-es="Conectamos creadores con marcas líderes para patrocinios a largo plazo en esports y torneos." data-en="Connecting creators with leading brands for long term sponsorships in esports and gaming events.">Conectamos creadores con marcas líderes para patrocinios a largo plazo en esports y torneos.</p>
+              <a href="#contact" class="service-link" data-es="Comenzar →" data-en="Get Started →">Comenzar →</a>
+            </div>
+
+            <!-- Card 4: Media Buying -->
+            <div class="service-card">
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+              </div>
+              <h3 class="service-card-title" data-es="Compra de Medios" data-en="Media Buying">Compra de Medios</h3>
+              <p class="service-card-desc" data-es="Adquisición de espacios publicitarios estratégicos en transmisiones en vivo y eventos de esports." data-en="Acquisition of strategic ad placements in livestreams and esports tournaments.">Adquisición de espacios publicitarios estratégicos en transmisiones en vivo y eventos de esports.</p>
+              <a href="#contact" class="service-link" data-es="Comenzar →" data-en="Get Started →">Comenzar →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Part B: Game Logs Section (Manual Carousel) -->
+        <div id="game-logs-sec" class="game-logs-section">
+          <div class="section-header text-center">
+            <h3 class="section-title">
+              <span data-es="Bitácora de Eventos" data-en="Game Logs">Bitácora de Eventos</span> 
+              <span class="accent-text" data-es="y Game Logs" data-en="& Activity Blog">y Game Logs</span>
+            </h3>
+            <p class="section-subtitle" data-es="Últimas actividades de la agencia, torneos organizados y novedades de creadores." data-en="Latest agency activities, hosted tournaments, and creator announcements.">Últimas actividades de la agencia, torneos organizados y novedades de creadores.</p>
+          </div>
+
+          <!-- Manual Carousel with navigation controls -->
+          <div class="game-logs-carousel-wrapper">
+            <button class="carousel-control-btn prev-btn" id="logs-prev-btn" aria-label="Previous slide">←</button>
+            
+            <div class="game-logs-carousel-container" id="logs-carousel-container">
+              <div class="game-logs-track" id="logs-carousel-track">
+                
+                <!-- Blog Card 1 -->
+                <div class="blog-card">
+                  <div class="blog-image">
+                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=500&auto=format&fit=crop&q=80" alt="Esports Tournament">
+                    <span class="blog-tag" data-es="TORNEOS" data-en="TOURNAMENTS">TORNEOS</span>
+                  </div>
+                  <div class="blog-content">
+                    <span class="blog-date">24 JUN, 2026</span>
+                    <h4 class="blog-title" data-es="Gran Torneo de Valorant de TSA Agency: Todo un Éxito de Audiencia" data-en="TSA Valorant Cup: A Massive Milestone in Viewership">Gran Torneo de Valorant de TSA Agency: Todo un Éxito de Audiencia</h4>
+                    <p class="blog-desc" data-es="Nuestra copa regional superó el pico de 150K espectadores simultáneos en los canales de nuestros creadores asociados." data-en="Our regional cup shattered records, hitting over 150K concurrent viewers across our streaming channels.">Nuestra copa regional superó el pico de 150K espectadores simultáneos en los canales de nuestros creadores asociados.</p>
+                    <a href="#contact" class="btn btn-outline btn-sm" data-es="Ver más" data-en="See more">Ver más</a>
+                  </div>
+                </div>
+
+                <!-- Blog Card 2 -->
+                <div class="blog-card">
+                  <div class="blog-image">
+                    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=500&auto=format&fit=crop&q=80" alt="Creators meetup">
+                    <span class="blog-tag" data-es="AGENCIA" data-en="AGENCY">AGENCIA</span>
+                  </div>
+                  <div class="blog-content">
+                    <span class="blog-date">18 JUN, 2026</span>
+                    <h4 class="blog-title" data-es="Reunión Anual de Creadores y Streamers de TSA en Madrid" data-en="Annual TSA Creator Summit & Meetup in Madrid">Reunión Anual de Creadores y Streamers de TSA en Madrid</h4>
+                    <p class="blog-desc" data-es="Compartimos talleres de edición, conferencias de marcas líderes y planificamos las campañas de la segunda mitad de 2026." data-en="We shared clip-editing workshops, discussions with sponsors, and planned the upcoming Q3-Q4 campaigns.">Compartimos talleres de edición, conferencias de marcas líderes y planificamos las campañas de la segunda mitad de 2026.</p>
+                    <a href="#contact" class="btn btn-outline btn-sm" data-es="Ver más" data-en="See more">Ver más</a>
+                  </div>
+                </div>
+
+                <!-- Blog Card 3 -->
+                <div class="blog-card">
+                  <div class="blog-image">
+                    <img src="https://images.unsplash.com/photo-1560253023-3ec5d502959f?w=500&auto=format&fit=crop&q=80" alt="Esports Gaming">
+                    <span class="blog-tag" data-es="COLABORACIONES" data-en="COLLABS">COLABORACIONES</span>
+                  </div>
+                  <div class="blog-content">
+                    <span class="blog-date">10 JUN, 2026</span>
+                    <h4 class="blog-title" data-es="Lanzamiento de la Campaña de Co-Branding con AMD Ryzen" data-en="AMD Ryzen Co-Branding Campaign Kickoff">Lanzamiento de la Campaña de Co-Branding con AMD Ryzen</h4>
+                    <p class="blog-desc" data-es="Nuestros streamers de hardware y variedad comienzan las pruebas del nuevo procesador con dinámicas y sorteos en vivo." data-en="Our hardware and variety creators kicked off a live showcase of the latest processor with giveaways.">Nuestros streamers de hardware y variedad comienzan las pruebas del nuevo procesador con dinámicas y sorteos en vivo.</p>
+                    <a href="#contact" class="btn btn-outline btn-sm" data-es="Ver más" data-en="See more">Ver más</a>
+                  </div>
+                </div>
+
+                <!-- Blog Card 4 -->
+                <div class="blog-card">
+                  <div class="blog-image">
+                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=500&auto=format&fit=crop&q=80" alt="Creator Campaign">
+                    <span class="blog-tag" data-es="CAMPAMENTO" data-en="CAMP">CAMPAMENTO</span>
+                  </div>
+                  <div class="blog-content">
+                    <span class="blog-date">02 JUN, 2026</span>
+                    <h4 class="blog-title" data-es="TSA BootCamp 2026: Impulsando Nuevos Streamers al Éxito" data-en="TSA BootCamp 2026: Onboarding Rising Stars">TSA BootCamp 2026: Impulsando Nuevos Streamers al Éxito</h4>
+                    <p class="blog-desc" data-es="Finaliza la primera edición del año de nuestro programa de incubación de talentos con un crecimiento promedio de 30% en views." data-en="The first cohort of the year graduated from our incubation program with an average viewership jump of 30%.">Finaliza la primera edición del año de nuestro programa de incubación de talentos con un crecimiento promedio de 30% en views.</p>
+                    <a href="#contact" class="btn btn-outline btn-sm" data-es="Ver más" data-en="See more">Ver más</a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <button class="carousel-control-btn next-btn" id="logs-next-btn" aria-label="Next slide">→</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Process / Benefit Steps -->
+    <section class="benefits-section">
+      <div class="container">
+        <div class="benefits-grid">
+          <!-- Step 1 -->
+          <div class="benefit-item">
+            <div class="benefit-num-hex">1</div>
+            <h3 class="benefit-title" data-es="Estrategia de Redacción Creativa" data-en="Top Copywriting Strategy">Estrategia de Redacción Creativa</h3>
+            <p class="benefit-desc" data-es="Un experto de nuestro equipo te guiará para optimizar tus guiones, títulos de stream y tweets de impacto." data-en="An expert from our team works with you to refine stream titles, video scripts, and high engagement social copy.">Un experto de nuestro equipo te guiará para optimizar tus guiones, títulos de stream y tweets de impacto.</p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="benefit-item">
+            <div class="benefit-num-hex">2</div>
+            <h3 class="benefit-title" data-es="Mentoría y Masterclass de Redes" data-en="Free Platform Masterclass">Mentoría y Masterclass de Redes</h3>
+            <p class="benefit-desc" data-es="Accede de forma directa a entrenamientos y clases exclusivas con creadores que superan el millón de seguidores." data-en="Gain instant access to training classes and elite workshops hosted by creators with over 1M followers.">Accede de forma directa a entrenamientos y clases exclusivas con creadores que superan el millón de seguidores.</p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="benefit-item">
+            <div class="benefit-num-hex">3</div>
+            <h3 class="benefit-title" data-es="Las Mejores Campañas de Esports" data-en="Premium Brand Campaigns">Las Mejores Campañas de Esports</h3>
+            <p class="benefit-desc" data-es="Acceso inmediato a contratos en periodo de prueba con marcas globales. Si ambas partes están felices, ¡es un contrato permanente!" data-en="Immediate trial campaigns with global brands. If both sides are happy, it turns into a permanent contract right away!">Acceso inmediato a contratos en periodo de prueba con marcas globales. Si ambas partes están felices, ¡es un contrato permanente!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA Section (Double buttons) -->
+    <section id="contact" class="final-cta-section">
+      <div class="container">
+        <div class="cta-dark-card">
+          <div class="cta-inner-glow"></div>
+          
+          <h2 class="cta-title">
+            <span data-es="Únete a" data-en="Join">Únete a</span> 
+            <span class="accent-text">TSA Agency</span> 
+            <span data-es="y Desbloquea tu Carrera Soñada Hoy" data-en="& Unlock Your Dream Career Today">y Desbloquea tu Carrera Soñada Hoy</span>
+          </h2>
+          <p class="cta-subtitle" 
+             data-es="Desbloquea tu verdadero potencial y conéctate con marcas globales de primer nivel que se alinean con tus metas." 
+             data-en="Unlock your true potential and connect with global top-tier brands that align with your ultimate goals.">
+            Desbloquea tu verdadero potencial y conéctate con marcas globales de primer nivel que se alinean con tus metas.
+          </p>
+
+          <form class="cta-email-form" id="contact-form" action="#" method="POST">
+            <div class="input-icon-wrapper">
+              <svg class="input-icon" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <input type="email" id="email-field" placeholder="Dirección de correo electrónico" data-placeholder-es="Dirección de correo electrónico" data-placeholder-en="Email Address" required>
+            </div>
+            <div class="cta-buttons-row">
+              <button type="submit" class="btn btn-primary" id="btn-submit-influencer">
+                <span data-es="Soy Influencer" data-en="I am an Influencer">Soy Influencer</span>
+              </button>
+              <button type="button" class="btn btn-outline" id="btn-submit-brand">
+                <span data-es="Soy Marca" data-en="I am a Brand">Soy Marca</span>
+              </button>
+            </div>
+          </form>
+          
+          <p class="form-feedback-msg" id="form-msg"></p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-section">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <a href="#" class="logo-link">
+          <img src="assets/TSA Logo.png" alt="TSA Agency Logo" class="footer-logo">
+        </a>
+      </div>
+      
+      <div class="footer-center">
+        <p class="copyright-text">
+          &copy; <span id="current-year">2026</span> TSA Agency. <span data-es="Todos los derechos reservados." data-en="All rights reserved.">Todos los derechos reservados.</span>
+        </p>
+      </div>
+
+      <div class="footer-right">
+        <div class="social-links">
+          <a href="#" class="social-circle" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37zM17.5 6.5h.01"/></svg>
+          </a>
+          <a href="#" class="social-circle" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+          </a>
+          <a href="#" class="social-circle social-circle-active" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <a href="#" class="social-circle" aria-label="Twitter/X">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>
