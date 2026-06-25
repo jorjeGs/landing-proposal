@@ -404,4 +404,41 @@ document.addEventListener('DOMContentLoaded', () => {
     btnSubmitBrand.addEventListener('click', (e) => handleFormSubmission(e, 'brand'));
   }
 
+  // --- 8. Scroll-Reveal Entrance Animations ---
+  function initScrollReveal() {
+    // Only enable scroll reveal if browser supports IntersectionObserver
+    if (!('IntersectionObserver' in window)) {
+      return;
+    }
+
+    // Add class to body to enable reveal styles dynamically
+    document.body.classList.add('reveal-enabled');
+
+    const revealElements = document.querySelectorAll('.scroll-reveal');
+
+    const observerOptions = {
+      root: null, // viewport
+      rootMargin: '0px 0px -80px 0px', // slightly offset trigger point
+      threshold: 0.1 // element is 10% visible
+    };
+
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          // Once animated, we don't need to observe it anymore
+          obs.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    revealElements.forEach(el => {
+      observer.observe(el);
+    });
+  }
+
+  // Initialize scroll reveal
+  initScrollReveal();
+
 });
+
