@@ -558,34 +558,118 @@ img {
   background: rgba(5, 6, 6, 0.5);
   position: relative;
   z-index: 2;
+  overflow: hidden;
+  width: 100%;
 }
 
-.partner-logos-grid {
+/* Gradient masks to fade logos at edges */
+.partner-logos-section::before,
+.partner-logos-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.partner-logos-section::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(5, 6, 6, 1), transparent);
+}
+
+.partner-logos-section::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(5, 6, 6, 1), transparent);
+}
+
+.partner-logos-carousel {
+  overflow: hidden;
+  width: 100%;
+  display: block;
+}
+
+.partner-logos-track {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 30px;
+  animation: scroll-brands 25s linear infinite;
+  width: max-content;
+}
+
+.partner-logos-group {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  padding-right: 80px; /* Spacing between groups */
+  flex-shrink: 0;
 }
 
 .logo-item {
-  color: var(--text-muted);
-  opacity: 0.6;
-  transition: var(--transition-normal);
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
-.logo-item svg {
-  height: 26px;
+.logo-item img {
   width: auto;
+  opacity: 0.6;
+  transition: var(--transition-normal);
 }
 
-.logo-item:hover {
-  color: var(--text-primary);
+.logo-item:hover img {
   opacity: 1;
-  filter: drop-shadow(0 0 8px rgba(74, 244, 225, 0.3));
+}
+
+/* Specific Filters and Sizes */
+.brand-amd {
+  height: 38px;
+  filter: brightness(0) invert(1);
+}
+.logo-item:hover .brand-amd {
+  filter: brightness(0) invert(1) drop-shadow(0 0 8px rgba(74, 244, 225, 0.5));
+}
+
+.brand-riot {
+  height: 28px;
+  filter: brightness(0) invert(1);
+}
+.logo-item:hover .brand-riot {
+  filter: brightness(0) invert(1) drop-shadow(0 0 8px rgba(74, 244, 225, 0.5));
+}
+
+.brand-mojang {
+  height: 24px;
+  filter: grayscale(1);
+}
+.logo-item:hover .brand-mojang {
+  filter: grayscale(1) brightness(1.2) drop-shadow(0 0 8px rgba(74, 244, 225, 0.5));
+}
+
+.brand-tiktok {
+  height: 28px;
+  filter: brightness(0) invert(1);
+}
+.logo-item:hover .brand-tiktok {
+  filter: brightness(0) invert(1) drop-shadow(0 0 8px rgba(74, 244, 225, 0.5));
+}
+
+.brand-twitch {
+  height: 30px;
+  filter: brightness(0) invert(1);
+}
+.logo-item:hover .brand-twitch {
+  filter: brightness(0) invert(1) drop-shadow(0 0 8px rgba(74, 244, 225, 0.5));
+}
+
+@keyframes scroll-brands {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-25%); /* Moves by exactly 1 group (25% of 4 groups) */
+  }
 }
 
 /* --- 4. Creators / Hero Portrait Gallery (Auto-Carousel) --- */
@@ -1273,9 +1357,11 @@ img {
   transition: var(--transition-normal);
 }
 
-.how-step-item:hover {
+.how-step-item:hover,
+body.reveal-enabled .how-step-item.revealed:hover {
   border-color: var(--border-cyan-active);
-  transform: translateX(4px);
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(74, 244, 225, 0.15);
 }
 
 .step-num-badge {
@@ -1513,14 +1599,11 @@ img {
   color: var(--bg-primary);
 }
 
-.service-card:hover {
+.service-card:hover,
+body.reveal-enabled .service-card.revealed:hover {
   transform: translateY(-6px);
   border-color: var(--border-cyan-active);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
-}
-
-.service-card:hover .service-icon {
-  transform: rotate(5deg) scale(1.05);
+  box-shadow: 0 10px 25px rgba(74, 244, 225, 0.15);
 }
 
 /* Game Logs Sub-section (Manual Carousel) */
@@ -2011,11 +2094,6 @@ img {
   
   .hero-title { font-size: clamp(2rem, 9vw, 2.5rem); }
   .hero-subtitle { font-size: 0.95rem; }
-  
-  .partner-logos-grid {
-    justify-content: center;
-    gap: 24px;
-  }
   
   .services-cards-grid {
     grid-template-columns: 1fr;

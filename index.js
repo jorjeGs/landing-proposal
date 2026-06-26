@@ -160,21 +160,32 @@ document.addEventListener('DOMContentLoaded', () => {
     // Clone children to make it look like a seamless loop
     const originalCards = Array.from(creatorsTrack.children);
     
-    // Duplicate the cards twice to ensure wide coverage
-    originalCards.forEach(card => {
-      const clone1 = card.cloneNode(true);
-      const clone2 = card.cloneNode(true);
-      creatorsTrack.appendChild(clone1);
-      creatorsTrack.appendChild(clone2);
-    });
+    // Duplicate the entire set of cards twice to ensure correct sequence [Set 1, Set 2, Set 3]
+    for (let i = 0; i < 2; i++) {
+      originalCards.forEach(card => {
+        creatorsTrack.appendChild(card.cloneNode(true));
+      });
+    }
 
     let speed = 1.2; // Pixels per frame
     let xOffset = 0;
     let isPaused = false;
 
-    // Calculate boundary length of one loop
-    let cardWidth = originalCards[0].offsetWidth + 24; // width + gap
-    let loopBoundary = cardWidth * originalCards.length;
+    // Calculate boundary length of one loop dynamically
+    let cardWidth = 0;
+    let loopBoundary = 0;
+
+    function updateBoundary() {
+      const card = originalCards[0];
+      const actualWidth = card ? card.offsetWidth : 0;
+      cardWidth = (actualWidth > 0 ? actualWidth : 280) + 24; // card width + flex gap
+      loopBoundary = cardWidth * originalCards.length;
+    }
+    updateBoundary();
+
+    // Recalculate on window resize/load to ensure accurate dimensions
+    window.addEventListener('resize', updateBoundary);
+    window.addEventListener('load', updateBoundary);
 
     function step() {
       if (!isPaused) {
